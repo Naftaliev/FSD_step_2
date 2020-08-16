@@ -1,0 +1,28 @@
+extends ../layout/main
+
+
+block variables
+   - var title = 'WHATEVER';
+   - var description = 'pageDescription';
+   - var pageClass = 'testPage1';
+
+   
+block content
+   section
+      .container
+         +item('ITEM_1', 'uno')
+   section
+      .container
+         +item('ITEM_2', 'dos')
+   section
+      .container
+         +item('ITEM_3', 'tres')
+
+
+block script
+   script(type='text/javascript').
+      const foo = true;
+      let bar = function() {};
+      if foo {
+      bar(1 + 5)
+      }
